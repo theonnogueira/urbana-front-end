@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
 import { UsuarioDeleteComponent } from './delete/usuario-delete/usuario-delete.component';
+import { CartaoEditComponent } from './edit/cartao-edit/cartao-edit.component';
+import { CartaoDeletComponent } from './delete/cartao-delet/cartao-delet.component';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { UsuarioDeleteComponent } from './delete/usuario-delete/usuario-delete.c
     InicioComponent,
     UsuarioComponent,
     UsuarioEditComponent,
-    UsuarioDeleteComponent
+    UsuarioDeleteComponent,
+    CartaoEditComponent,
+    CartaoDeletComponent
   ],
   imports: [
     BrowserModule,
