@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="row bg-light d-flex align-items-center">
+  <div class="row bg-success d-flex align-items-center">
     <div class="col-md-6">
       <div class="row d-flex justify-content-center">
         <div class="col-md-6 text-success text-center">
@@ -35,14 +35,14 @@
   </div>
 </div>
 
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 <h2 class="text-center">
   Para cadastrar um cartão, preencha os campos abaixo:
@@ -96,7 +96,7 @@
     </button>
   </form>
 </div>
-<hr />
+<br />
 <ul
   class="nav nav-tabs d-flex justify-content-center"
   id="myTab"
@@ -122,6 +122,17 @@
     role="tabpanel"
     aria-labelledby="todosCartoes-tab"
   >
-    Todos os cartões
+    <div class="card-columns">
+      <div class="card" *ngFor="let item of listaCartao">
+        <div class="card-body">
+          <h2 class="card-title">
+            Número do seu cartão: {{ item.numeroCartao }}
+          </h2>
+          <h2 class="card-title">Tipo de cartão: {{ item.tipoCartao }}</h2>
+          <h2 class="card-text">Status: {{ item.status }}</h2>
+          <h2 class="card-text">Usuário: {{ item.usuario.apelido }}</h2>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
