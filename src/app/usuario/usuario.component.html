@@ -5,15 +5,24 @@
         <i class="fa fa-angle-double-left" aria-hidden="true"></i> Home
       </a>
 
-      <h1 class="fs-54 text-center" style="font-family: 'Times New Roman', Times, serif;">Usuário</h1>
-      <h5 class="fs-18 text-center" style="font-family: 'Times New Roman', Times, serif;">
+      <h1
+        class="fs-54 text-center"
+        style="font-family: 'Times New Roman', Times, serif"
+      >
+        Usuário
+      </h1>
+      <h5
+        class="fs-18 text-center"
+        style="font-family: 'Times New Roman', Times, serif"
+      >
         Cadastre aqui o seu usuário:
       </h5>
 
       <div class="row d-flex justify-content-center mt-4 mb-5">
         <div class="col-md-3">
           <div class="form-group">
-            <input [(ngModel)]='usuario.apelido'
+            <input
+              [(ngModel)]="usuario.apelido"
               type="text"
               class="form-control"
               id="nome"
@@ -21,7 +30,9 @@
             />
           </div>
           <div class="d-flex justify-content-center mt-3">
-            <button class="btn btn-light" (click)="cadastrar()">Cadastrar</button>
+            <button class="btn btn-light" (click)="cadastrar()">
+              Cadastrar
+            </button>
           </div>
         </div>
       </div>
@@ -42,18 +53,26 @@
             <th scope="col">#</th>
             <th scope="col">Nome</th>
             <th scope="col" class="text-right">Modificações</th>
-
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor='let usuario of listaUsuarios'>
-            <th>{{usuario.id}}</th>
-            <td>{{usuario.apelido}}</td>
+          <tr *ngFor="let usuario of listaUsuarios">
+            <th>{{ usuario.id }}</th>
+            <td>{{ usuario.apelido }}</td>
             <td class="d-flex justify-content-end">
-              <button class="btn btn-info m-1" [routerLink]="['/usuario-edit', usuario.id]">Editar</button>
-              <button class="btn btn-danger m-1" [routerLink]="['/usuario-delete', usuario.id]">Apagar</button>
+              <button
+                class="btn btn-info m-1"
+                [routerLink]="['/usuario-edit', usuario.id]"
+              >
+                Editar
+              </button>
+              <button
+                class="btn btn-danger m-1"
+                [routerLink]="['/usuario-delete', usuario.id]"
+              >
+                Apagar
+              </button>
             </td>
-
           </tr>
         </tbody>
       </table>
