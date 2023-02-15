@@ -131,6 +131,19 @@
           <h2 class="card-title">Tipo de cartão: {{ item.tipoCartao }}</h2>
           <h2 class="card-text">Status: {{ item.status }}</h2>
           <h2 class="card-text">Usuário: {{ item.usuario.apelido }}</h2>
+
+          <a
+            [routerLink]="['/cartao-edit', item.id]"
+            class="text-info m-3"
+            href=""
+            >Editar</a
+          >
+          <a
+            [routerLink]="['/cartao-delet', item.id]"
+            class="text-danger m-3"
+            href=""
+            >Apagar</a
+          >
         </div>
       </div>
     </div>
